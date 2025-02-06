@@ -21,10 +21,10 @@
     @apply text-xl leading-[24px] font-bold uppercase;
   }
   .card-description {
-    @apply relative text-base indent-8 text-left whitespace-normal leading-7;
+    @apply relative text-base indent-8 text-left whitespace-normal leading-7 flex flex-col;
   }
   .icon-bottom {
-    @apply absolute bottom-[-1px] right-[-4px];
+    @apply flex justify-end;
   }
   .icon-bottom svg {
     @apply w-[24px] h-[24px];

@@ -7,7 +7,10 @@ type Props = {
 
 const HomeContent: React.FC<Props> = ({ children, id }: Props) => {
   return (
-    <div id={id} className="container m-auto min-h-dvh w-full flex flex-col gap-6 pt-[50px]">
+    <div
+      id={id}
+      className="container m-auto min-h-dvh w-full flex flex-col gap-6 pt-[50px] sticky max-md:relative  top-0 bg-color_white dark:bg-bg_main"
+    >
       {children}
     </div>
   );

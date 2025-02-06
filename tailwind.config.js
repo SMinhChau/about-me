@@ -30,6 +30,9 @@ export default {
       mobile_bg_gray: '#94a3b8',
       bg_content_mobile: '#f1f5f9',
       bg_content_mobile_dark: '#111827',
+      // shadow
+      shadow_card_dark: '#406561',
+      shadow_card_light: '#c3d0e1',
     },
     keyframes: {
       'slide-in': {
@@ -40,10 +43,38 @@ export default {
         '0%': { transform: 'translate3d(0, -100%, 0)', opacity: 0 },
         '100%': { transform: 'translate3d(0, 0, 0)', opacity: 1 },
       },
+      // text
+      typing: {
+        '0%': {
+          width: '0%',
+          visibility: 'hidden',
+        },
+        '100%': {
+          width: '100%',
+        },
+      },
+      blink: {
+        '50%': {
+          borderColor: 'transparent',
+        },
+        '100%': {
+          borderColor: 'white',
+        },
+      },
+      marquee: {
+        '0%': {
+          transform: 'translateX(50%)',
+        },
+        '100%': {
+          transform: 'translateX(-200%)',
+        },
+      },
     },
     animation: {
       'slide-in': 'slide-in 0.3s ease-out',
       'slide-down': 'slide-down 0.3s ease-out',
+      typing: 'typing 2s steps(20) infinite alternate, blink .7s infinite',
+      marquee: ' marquee 40s  linear infinite ',
     },
   },
 

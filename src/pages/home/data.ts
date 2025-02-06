@@ -2,3 +2,72 @@ export const ContactData = {
   first_letter:
     "If you want to know about me, you’ll have to dig a little deeper!  My journey so far has been full of curiosity, growth, and creativity. Whether it's diving into new challenges or seeking inspiration in everyday moments, I’m always ready to embrace what’s next. Want to know more? Let’s connect and fill in the blanks together!",
 };
+
+export const SkillsData = [
+  {
+    href: 'https://git-scm.com/',
+    alt: 'git',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+  },
+  {
+    href: 'https://www.w3.org/html/',
+    alt: ' html',
+    src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg ',
+  },
+  {
+    href: 'https://www.w3.org/html/',
+    alt: ' html5',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg ',
+  },
+  {
+    href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    alt: 'javascript ',
+    src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg ',
+  },
+  {
+    href: 'https://www.typescriptlang.org/',
+    alt: ' typescript',
+    src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg ',
+  },
+  {
+    href: 'https://sass-lang.com',
+    alt: ' sass',
+    src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg ',
+  },
+  {
+    href: 'https://tailwindcss.com/',
+    alt: ' tailwindcss',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg ',
+  },
+  {
+    href: 'https://styled-components.com/',
+    alt: ' styled-components',
+    src: '',
+    code: 'styled-components',
+  },
+  {
+    href: 'https://reactjs.org/',
+    alt: ' reactjs',
+    src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg ',
+  },
+  {
+    href: 'https://nextjs.org/',
+    alt: 'nextjs ',
+    src: ' https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg ',
+  },
+  {
+    href: 'https://redux.js.org/',
+    alt: ' redux',
+    src: ' https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg ',
+  },
+  {
+    href: 'https://postman.com/',
+    alt: ' postman',
+    src: ' https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg ',
+  },
+  {
+    href: 'https://www.linux.org/',
+    alt: ' linux',
+    src: ' https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg ',
+  },
+];

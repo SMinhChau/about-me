@@ -7,7 +7,7 @@ import Link from '../common/link';
 const Footer = () => {
   return (
     <footer className="footer-content">
-      <span className="">@2024</span>
+      <span className="">@2025</span>
 
       <div className="group-icon">
         <Link href="https://github.com/SMinhChau">

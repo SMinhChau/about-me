@@ -10,6 +10,7 @@ import { useLocation } from 'react-router-dom';
 type Props = {
   handleMenu: () => void;
 };
+
 const HeaderMenus = [
   { id: 1, name: 'About me', url: '/#info', icon: <BsInfoCircle />, hash: '#info' },
   {

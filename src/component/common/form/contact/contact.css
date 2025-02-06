@@ -4,13 +4,13 @@
 
 @layer utilities {
   .form-content {
-    @apply container flex flex-row max-md:flex-col gap-5  max-md:gap-6
-    mt-6 mx-7 max-lg:mx-0;
+    @apply container w-full flex flex-row max-md:flex-col gap-5 max-md:gap-6
+    mt-6 max-lg:mx-0;
   }
 }
 
 .item-info {
-  @apply flex flex-col basis-[40%] items-start justify-start gap-8;
+  @apply flex flex-col flex-[40%] items-start justify-start gap-8;
 }
 
 .content-item .label {
@@ -18,7 +18,7 @@
 }
 
 .item-content {
-  @apply flex flex-col basis-[calc(100%_-_40%_-_40px)] gap-8;
+  @apply flex flex-col flex-[60%] gap-8;
 }
 
 @layer utilities {
