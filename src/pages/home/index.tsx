@@ -1,12 +1,11 @@
 import HomeContent from '@/component/home-content';
 import './home.css';
-import { ContactData, SkillsData } from './data';
+import { ContactData, DetailInfo, SkillsData } from './data';
 import ContactForm from '@/component/common/form/contact';
 import { MyExperiences } from '@/utils/content';
 import CardContent from '@/component/card-content';
 
 import Images from '/images/home/bg-info.webp';
-import { useEffect, useState } from 'react';
 
 const HomePage = () => {
   const Experiences = () => {
@@ -43,16 +42,10 @@ const HomePage = () => {
             </div>
 
             <div className="skill-list">
+              <h4 className="alt-skills">My skills</h4>
               <div className="marquee-content flex gap-4 items-center ">
                 <div className="flex gap-5 items-center">
                   {SkillsData.map((skill, index) => {
-                    if (skill?.code == 'styled-components') {
-                      return (
-                        <a href={skill.href} target="_blank" key={index} className="skill-item">
-                          <span className="w-full h-full flex items-center ">💅</span>
-                        </a>
-                      );
-                    }
                     return (
                       <a href={skill.href} target="_blank" key={index} className="skill-item">
                         <img src={skill.src} alt={skill.alt} />
@@ -65,9 +58,11 @@ const HomePage = () => {
           </div>
 
           <div className="right-information">
+            <h4 className="position">Front-End Developer</h4>
             <div className="welcome">
-              <h1 className="text-content">right right</h1>
+              <h1 className="text-content">Hello I'm Chau Nguyen</h1>
             </div>
+            <div className="detail-info"> {DetailInfo}</div>
           </div>
         </div>
       </HomeContent>

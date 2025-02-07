@@ -42,8 +42,12 @@ export const SkillsData = [
   {
     href: 'https://styled-components.com/',
     alt: ' styled-components',
-    src: '',
-    code: 'styled-components',
+    src: '/images/home/styled-component.png',
+  },
+  {
+    href: 'https://mui.com/material-ui/getting-started/',
+    alt: 'material-ui',
+    src: '/images/home/mui-ui.png',
   },
   {
     href: 'https://reactjs.org/',
@@ -71,3 +75,6 @@ export const SkillsData = [
     src: ' https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg ',
   },
 ];
+
+export const DetailInfo =
+  'Expert JavaScript developer with 2 years of experience specializing in front-end technologies. I am looking to further enhance my expertise in JavaScript, TypeScript, and React while expanding into back-end development to become a proficient full-stack developer. I aim to make significant contributions to innovative projects and deliver impactful results in my workplace.';

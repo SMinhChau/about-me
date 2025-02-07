@@ -25,11 +25,11 @@
 @layer utilities {
   /* Information */
   .information {
-    @apply container mx-auto min-h-dvh flex max-md:flex-col flex-row gap-7 max-md:items-start;
+    @apply container mx-auto flex max-md:flex-col flex-row gap-10 max-md:gap-9 max-md:items-start;
   }
   /* Left */
   .left-information {
-    @apply flex flex-col w-[40%] max-md:w-full max-md:flex-[0]  mt-[10%] max-md:mt-2 gap-[50px] max-md:gap-3 items-center justify-start;
+    @apply flex flex-col w-[40%] max-md:w-full max-md:flex-[0]  mt-[10%] max-md:mt-2 gap-[50px] max-md:gap-5 items-center justify-start;
   }
 
   .image-content {
@@ -42,10 +42,14 @@
   }
   /* Right */
   .right-information {
-    @apply flex w-[60%] max-md:w-full;
+    @apply flex flex-col w-[60%] max-md:w-full px-4 max-md:px-0 gap-2 max-md:gap-2 pt-9 max-md:pt-0;
+  }
+
+  .position {
+    @apply flex items-center max-md:justify-center text-sm text-border_input font-bold dark:text-primary_color;
   }
   .welcome {
-    @apply w-max pb-2 max-md:pl-5;
+    @apply w-max pb-2 max-md:pl-2;
   }
   .text-content {
     @apply animate-typing text-center overflow-hidden whitespace-nowrap pr-5
@@ -54,7 +58,8 @@
 
   /* Skills content */
   .skill-list {
-    @apply flex flex-row  w-full relative py-4 overflow-hidden;
+    @apply flex flex-row  w-full relative py-4 overflow-hidden
+     bg-[#ecfeff] rounded-2xl dark:bg-[#042f2e];
   }
 
   .marquee-content {
@@ -62,5 +67,18 @@
   }
   .skill-item {
     @apply justify-center w-16 h-16 max-md:w-12 max-md:h-12;
+  }
+  .alt-skills {
+    background: linear-gradient(to right, rgb(52, 119, 76), rgb(186, 215, 207), rgb(127, 9, 127));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    @apply flex items-center justify-center w-full h-full absolute top-0 text-xl uppercase opacity-[0.5] hover:opacity-[1]  transform-gpu;
+  }
+
+  .detail-info {
+    @apply text-lg max-md:text-base leading-6 text-left font-semibold max-md:text-center 
+    border-2 p-7 rounded-lg border-blue_border shadow-lg shadow-title
+    hover:translate-y-1 transition-transform duration-300;
   }
 }

@@ -63,7 +63,7 @@ export default {
       },
       marquee: {
         '0%': {
-          transform: 'translateX(50%)',
+          transform: 'translateX(20%)',
         },
         '100%': {
           transform: 'translateX(-200%)',
