@@ -10,12 +10,14 @@
     @apply flex flex-row w-full;
   }
   .content-item .contact-label {
-    @apply text-wrap w-[100px] capitalize;
+    @apply text-wrap w-[100px] max-md:w-[90px] capitalize;
   }
   .content-item .contact-value {
-    @apply text-wrap break-all  truncate w-[calc(100%_-_100px)];
+    @apply opacity-95 text-wrap break-all truncate w-[calc(100%_-_100px)] max-md:w-[calc(100%_-_90px)];
   }
-
+  .content-item a {
+    @apply hover:opacity-100;
+  }
   .content-item .contact-value .email {
     @apply lowercase;
   }

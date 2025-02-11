@@ -37,7 +37,7 @@ export const SkillsData = [
   {
     href: 'https://tailwindcss.com/',
     alt: ' tailwindcss',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg ',
+    src: '/images/home/tailwindcss.png',
   },
   {
     href: 'https://styled-components.com/',

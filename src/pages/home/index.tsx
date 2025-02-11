@@ -15,6 +15,7 @@ const HomePage = () => {
           Hi
           <span className="sub-title"> There</span>
         </h2>
+
         <p className="exps-description">
           There are many variations of passages ofLorem Ipsum available, but the I’ve written a few
           thousand words on why traditional “semantic class names” are the reason CSS is hard to
@@ -25,7 +26,7 @@ const HomePage = () => {
 
         <div className="cards">
           {MyExperiences.map((item, index) => {
-            return <CardContent key={index} item={item} />;
+            return <CardContent key={item.id || index} item={item} />;
           })}
         </div>
       </HomeContent>
@@ -48,7 +49,7 @@ const HomePage = () => {
                   {SkillsData.map((skill, index) => {
                     return (
                       <a href={skill.href} target="_blank" key={index} className="skill-item">
-                        <img src={skill.src} alt={skill.alt} />
+                        <img className="logo-item" src={skill.src} alt={skill.alt} />
                       </a>
                     );
                   })}
@@ -72,11 +73,11 @@ const HomePage = () => {
   const ContactMe = () => {
     return (
       <HomeContent id="contact">
-        <h2 className="title text-center">
+        <h2 className="title">
           Contact
           <span className="sub-title"> Me</span>
         </h2>
-        <p className="first-letter">{ContactData['first_letter']}</p>
+        <p className="exps-description w-full">{ContactData['first_letter']}</p>
         <ContactForm />
       </HomeContent>
     );
