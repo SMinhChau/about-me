@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import './header.css';
 import { useWindowSize } from '@/hook/useWindowSize';
 import ToggleMode from '../common/toggle-mode';
@@ -14,8 +14,8 @@ type Props = {
 
 export const HeaderMenus = [
   { id: 1, name: 'About me', url: '/#info', hash: '#info' },
-  { id: 2, name: 'Experiences', url: '/#experiences', hash: '#experiences' },
-  { id: 3, name: 'Projects', url: '/projects', hash: '#projects' },
+  { id: 2, name: 'Experiences', url: '/#experiences', hash: '#experiences', disable: true },
+  { id: 3, name: 'Projects', url: '/#projects', hash: '#projects', disable: true },
   { id: 4, name: 'Contact', url: '/#contact', hash: '#contact' },
 ];
 
@@ -25,6 +25,13 @@ const Header: React.FC<Props> = ({ nonNavbar }: Props) => {
   const { setIsOverFlow } = useContext(ThemeContextOverFlow);
   const isMobile = useIsMobile();
   const location = useLocation();
+
+  useEffect(() => {
+    if (location?.hash) {
+      setIsOverFlow?.(false);
+      setIsMenu(false);
+    }
+  }, [location?.hash]);
 
   useEffect(() => {
     if (!isMobile) {
@@ -64,9 +71,13 @@ const Header: React.FC<Props> = ({ nonNavbar }: Props) => {
                 {HeaderMenus.map(item => (
                   <a
                     key={item.id}
-                    href={item.url || '#'}
-                    className={`rounded-lg px-3 py-2 menu-item ${
-                      item.hash == location?.hash && 'item-selected'
+                    href={item?.disable ? `javascript:void(0)` : item.url || '#'}
+                    className={`rounded-lg px-3 py-2 menu-item  ${
+                      item?.disable
+                        ? 'disabled'
+                        : item.hash == location?.hash
+                        ? 'item-selected'
+                        : ''
                     }`}
                   >
                     {item.name}

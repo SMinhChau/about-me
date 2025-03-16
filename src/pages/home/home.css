@@ -33,12 +33,13 @@
   }
 
   .image-content {
-    @apply rounded-lg shadow-lg dark:shadow-shadow_card_dark shadow-shadow_card_light w-[90%] md:w-10/12 
+    @apply rounded-lg shadow-lg dark:shadow-shadow_card_dark shadow-shadow_card_light  md:w-10/12 
     transform duration-500 hover:translate-x-5 max-md:hover:translate-x-2 hover:-translate-y-5 max-md:hover:-translate-y-2 pointer-events-none;
   }
   .image {
     @apply rounded-lg shadow-lg transform duration-500 
-    hover:-translate-x-16 max-md:hover:-translate-x-5 hover:translate-y-10  max-md:hover:translate-y-5 pointer-events-auto;
+    hover:-translate-x-16 max-md:hover:-translate-x-5 hover:translate-y-10  max-md:hover:translate-y-5 pointer-events-auto
+    w-[400px] h-[400px] object-cover max-md:w-[300px] max-lg:h-[300px];
   }
   /* Right */
   .right-information {

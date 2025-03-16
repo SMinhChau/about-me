@@ -5,15 +5,15 @@ import ContactForm from '@/component/common/form/contact';
 import { MyExperiences } from '@/utils/content';
 import CardContent from '@/component/card-content';
 
-import Images from '/images/home/bg-info.webp';
+import Images from '/images/home/avatar.jpg';
 
 const HomePage = () => {
   const Experiences = () => {
     return (
       <HomeContent id="experiences">
         <h2 className="title">
-          Hi
-          <span className="sub-title"> There</span>
+          My
+          <span className="sub-title"> Experiences</span>
         </h2>
 
         <p className="exps-description">
@@ -86,7 +86,7 @@ const HomePage = () => {
   return (
     <div className="container fex flex-col relative">
       <Information />
-      <Experiences />
+      {/* <Experiences /> */}
       <ContactMe />
     </div>
   );

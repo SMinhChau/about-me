@@ -50,7 +50,7 @@ export default {
           visibility: 'hidden',
         },
         '100%': {
-          width: '100%',
+          width: '93%',
         },
       },
       blink: {

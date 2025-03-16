@@ -13,7 +13,7 @@ type FormData = {
 const FormContact = 'form-contact';
 
 const ContactForm = () => {
-  const { success, error } = useNotification() || { success: () => {}, error: () => {} };
+  const { success } = useNotification() || { success: () => {}, error: () => {} };
   const { register, handleSubmit, reset } = useForm<FormData>();
 
   const onSubmit = async (data: FormData) => {

@@ -20,7 +20,7 @@ body {
 }
 
 .dark body {
-  @apply bg-[#000000] text-[#a1a1aa];
+  @apply bg-bg_main text-[#a1a1aa];
 }
 
 h1 {

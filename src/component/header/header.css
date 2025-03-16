@@ -16,6 +16,10 @@
   .menu-list .item-selected {
     @apply underline hover:decoration-title_hover dark:hover:decoration-title_hover decoration-blue_border dark:decoration-blue_border_dark decoration-2 underline-offset-4;
   }
+
+  .menu-list .menu-item .disable {
+    @apply text-warning_color;
+  }
 }
 
 @layer components {

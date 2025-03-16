@@ -19,8 +19,16 @@ const HeaderMenus = [
     url: '/#experiences',
     icon: <BsPersonWorkspace />,
     hash: '#experiences',
+    disable: true,
   },
-  { id: 3, name: 'Projects', url: '/#projects', icon: <GoProjectSymlink />, hash: '#projects' },
+  {
+    id: 3,
+    name: 'Projects',
+    url: '/#projects',
+    icon: <GoProjectSymlink />,
+    hash: '#projects',
+    disable: true,
+  },
   { id: 4, name: 'Contact', url: '/#contact', icon: <GrContact />, hash: '#contact' },
 ];
 
@@ -37,9 +45,17 @@ const MobileMenu: React.FC<Props> = ({ handleMenu }: Props) => {
         <nav className="menus">
           {HeaderMenus.map(item => {
             return (
-              <a className="item-menu" key={item.id} href={item.url || '#'}>
+              <a
+                className="item-menu"
+                key={item.id}
+                href={item?.disable ? `javascript:void(0)` : item.url || '#'}
+              >
                 <span className="icon">{item.icon}</span>
-                <h3 className={`item-title ${item.hash == location?.hash && 'item-selected'}`}>
+                <h3
+                  className={`item-title ${
+                    item.hash == location?.hash && 'item-selected'
+                  } ${item} `}
+                >
                   {item.name}
                 </h3>
               </a>
