@@ -19,9 +19,11 @@ const ContactInfo = () => {
         return <div className={`contact-value`}>{item.value}</div>;
       case 2:
         return (
-          <a href={`tel:${item.value}`} className={`contact-value`}>
-            {item.value}
-          </a>
+          <span>
+            <a href={`tel:${item.value}`} className={`contact-value`}>
+              {item.value}
+            </a>
+          </span>
         );
       case 3:
         return <div className={`contact-value email`}>{item.value}</div>;
