@@ -9,7 +9,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "proxy": "https://eventista-platform-api.1vote.vn",
-    "deploy": "wrangler pages deploy"
+     "deploy": "wrangler pages deploy",
+    "pages:dev": "wrangler pages dev -- yarn run dev",
+    "pages:deploy": "yarn run build && wrangler pages deploy"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
