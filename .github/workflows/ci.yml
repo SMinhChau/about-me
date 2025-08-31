@@ -1,0 +1,36 @@
+name: About me
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: About me
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules package-lock.json
+          yarn cache clean
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn run build
+
+      - name: Deploy to Cloudflare Pages with Wrangler
+        run: yarn  wrangler pages deploy dist
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
