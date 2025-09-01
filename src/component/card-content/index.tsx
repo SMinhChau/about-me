@@ -2,7 +2,6 @@ import React, { CSSProperties, ReactNode } from 'react';
 import './card-content.css';
 import { formatDateTime } from '@/utils/common';
 import Link from '../common/link';
-import { FaGithub } from 'react-icons/fa';
 import { isToday } from 'date-fns';
 import { ExperiencesType } from '@/utils/content';
 
@@ -17,7 +16,7 @@ const CardContent: React.FC<Props> = ({ item, styled }) => {
     return null;
   }
 
-  const { start_date, end_date, company_name, description } = item;
+  const { start_date, end_date, company_name, role, responsibilities, base, link } = item;
 
   return (
     <div className="card-list" style={styled}>
@@ -26,17 +25,36 @@ const CardContent: React.FC<Props> = ({ item, styled }) => {
           isToday(end_date) ? 'Current' : formatDateTime(end_date)
         }`}
       </h2>
-      <h4 className="card-name">{company_name}</h4>
+      <h4 className="card-name">
+        Company name: <Link href={link}>{company_name}</Link>
+      </h4>
+      <span className="role">Role: {role}</span>
 
       <div className="card-description">
-        <p>{description}</p>
-
-        <span className="icon-bottom">
-          <Link href="https://github.com/SMinhChau">
-            <FaGithub className="icon-footer" />
-          </Link>
-        </span>
+        <span className="label">Responsibilities:</span>
+        {responsibilities?.length > 0 && (
+          <ul className="responsibilities-list">
+            {responsibilities.map((resp, index) => {
+              return (
+                <li key={index} className="responsibilities">
+                  {resp}
+                </li>
+              );
+            })}
+          </ul>
+        )}
       </div>
+
+      <div className="card-description">
+        <span className="label">Technology description: </span>
+        <span>{base}</span>
+      </div>
+
+      {/* <span className="icon-bottom">
+        <Link href="https://github.com/SMinhChau">
+          <Github />
+        </Link>
+      </span> */}
     </div>
   );
 };

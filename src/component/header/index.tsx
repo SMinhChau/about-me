@@ -14,7 +14,7 @@ type Props = {
 
 export const HeaderMenus = [
   { id: 1, name: 'About me', url: '/#info', hash: '#info' },
-  { id: 2, name: 'Experiences', url: '/#experiences', hash: '#experiences', disable: true },
+  { id: 2, name: 'Experiences', url: '/#experiences', hash: '#experiences' },
   { id: 3, name: 'Projects', url: '/#projects', hash: '#projects', disable: true },
   { id: 4, name: 'Contact', url: '/#contact', hash: '#contact' },
 ];

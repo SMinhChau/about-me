@@ -2,36 +2,37 @@ import HomeContent from '@/component/home-content';
 import './home.css';
 import { ContactData, DetailInfo, SkillsData } from './data';
 import ContactForm from '@/component/common/form/contact';
-// import { MyExperiences } from '@/utils/content';
-// import CardContent from '@/component/card-content';
-
 import Images from '/images/home/avatar.jpg';
+import CardContent from '@/component/card-content';
+import { MyExperiences } from '@/utils/content';
 
 const HomePage = () => {
-  // const Experiences = () => {
-  //   return (
-  //     <HomeContent id="experiences">
-  //       <h2 className="title">
-  //         My
-  //         <span className="sub-title"> Experiences</span>
-  //       </h2>
+  const Experiences = () => {
+    return (
+      <HomeContent id="experiences">
+        <h2 className="title">
+          My
+          <span className="sub-title"> Experiences</span>
+        </h2>
 
-  //       <p className="exps-description">
-  //         There are many variations of passages ofLorem Ipsum available, but the I’ve written a few
-  //         thousand words on why traditional “semantic class names” are the reason CSS is hard to
-  //         maintain, but the truth is never going to believe me until you actually try it. If you can
-  //         suppress the urge to retch long enough to give it a chance, I really think you’ll wonder
-  //         how you ever worked with CSS any other way.
-  //       </p>
+        <p className="exps-description">
+          Web Developer with 2 years of experience in building responsive web and mobile
+          applications. At Dinh Anh JSC, I worked on an e-commerce and job listing platform,
+          focusing on developing features, enhancing performance, and improving product stability.
+          Previously at Kyanon Digital, I contributed to a mobile shopping app, improving user
+          interaction and responsiveness. Skilled in JavaScript, TypeScript, React, React Native,
+          Next.js, Redux, Material UI, and Styled Components, with a strong focus on performance
+          optimization and user experience.
+        </p>
 
-  //       <div className="cards">
-  //         {MyExperiences.map((item, index) => {
-  //           return <CardContent key={item.id || index} item={item} />;
-  //         })}
-  //       </div>
-  //     </HomeContent>
-  //   );
-  // };
+        <div className="cards">
+          {MyExperiences.map((item, index) => {
+            return <CardContent key={item.id || index} item={item} />;
+          })}
+        </div>
+      </HomeContent>
+    );
+  };
 
   const Information = () => {
     return (
@@ -86,7 +87,7 @@ const HomePage = () => {
   return (
     <div className="container fex flex-col relative">
       <Information />
-      {/* <Experiences /> */}
+      <Experiences />
       <ContactMe />
     </div>
   );

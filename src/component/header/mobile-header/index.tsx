@@ -1,7 +1,7 @@
 import './mobile-header.css';
 import ToggleMode from '@/component/common/toggle-mode';
+import { Menu } from 'lucide-react';
 import React from 'react';
-import { AiOutlineMenu } from 'react-icons/ai';
 
 type Props = {
   handleMenu: () => void;
@@ -15,7 +15,7 @@ const MobileHeader: React.FC<Props> = ({ handleMenu }: Props) => {
       </div>
 
       <button onClick={handleMenu}>
-        <AiOutlineMenu />
+        <Menu />
       </button>
     </div>
   );

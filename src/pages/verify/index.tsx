@@ -1,11 +1,9 @@
 import HomeContent from '@/component/home-content';
-
 import { useForm } from 'react-hook-form';
 import './styled.css';
-
 import useNotification from '@/hook/useNotification';
 import { useNavigate } from 'react-router-dom';
-import { IoArrowBackSharp } from 'react-icons/io5';
+import { ArrowLeft } from 'lucide-react';
 
 type FormData = {
   email: string;
@@ -131,7 +129,7 @@ const VerifyEmail = () => {
               </h4>
             </a>
             <span className="content-back " onClick={() => navigation('/')}>
-              <IoArrowBackSharp />
+              <ArrowLeft />
               <span>Quay lại</span>
             </span>
             <h3 className="title">Lấy lại mật khẩu</h3>
