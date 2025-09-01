@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "proxy": "https://eventista-platform-api.1vote.vn",
-     "deploy": "wrangler pages deploy",
+    "deploy": "wrangler pages deploy",
     "pages:dev": "wrangler pages dev -- yarn run dev",
     "pages:deploy": "yarn run build && wrangler pages deploy"
   },
@@ -23,11 +23,11 @@
     "dotenv": "^16.4.7",
     "emailjs-com": "^3.2.0",
     "firebase": "^11.4.0",
+    "lucide-react": "^0.542.0",
     "nodemailer": "^6.9.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
-    "react-icons": "^5.2.1",
     "react-router-dom": "^6.25.1",
     "wrangler": "^4.33.1"
   },

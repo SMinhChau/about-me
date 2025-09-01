@@ -1,23 +1,20 @@
 import React from 'react';
 import './menu-mobile.css';
-import { IoClose } from 'react-icons/io5';
-import { GoProjectSymlink } from 'react-icons/go';
-import { BsPersonWorkspace } from 'react-icons/bs';
-import { BsInfoCircle } from 'react-icons/bs';
-import { GrContact } from 'react-icons/gr';
+
 import { useLocation } from 'react-router-dom';
+import { NotebookTabs, PanelTop, UserRound, X } from 'lucide-react';
 
 type Props = {
   handleMenu: () => void;
 };
 
 const HeaderMenus = [
-  { id: 1, name: 'About me', url: '/#info', icon: <BsInfoCircle />, hash: '#info' },
+  { id: 1, name: 'About me', url: '/#info', icon: <UserRound />, hash: '#info' },
   {
     id: 2,
     name: 'Experiences',
     url: '/#experiences',
-    icon: <BsPersonWorkspace />,
+    icon: <UserRound />,
     hash: '#experiences',
     disable: true,
   },
@@ -25,11 +22,12 @@ const HeaderMenus = [
     id: 3,
     name: 'Projects',
     url: '/#projects',
-    icon: <GoProjectSymlink />,
+    icon: <PanelTop />,
+
     hash: '#projects',
     disable: true,
   },
-  { id: 4, name: 'Contact', url: '/#contact', icon: <GrContact />, hash: '#contact' },
+  { id: 4, name: 'Contact', url: '/#contact', icon: <NotebookTabs />, hash: '#contact' },
 ];
 
 const MobileMenu: React.FC<Props> = ({ handleMenu }: Props) => {
@@ -39,7 +37,7 @@ const MobileMenu: React.FC<Props> = ({ handleMenu }: Props) => {
     <div className="nar-mobile">
       <div className="content">
         <span className="close-icon">
-          <IoClose onClick={handleMenu} />
+          <X onClick={handleMenu} />
         </span>
 
         <nav className="menus">

@@ -1,10 +1,7 @@
 import HomeContent from '@/component/home-content';
-
 import { useForm } from 'react-hook-form';
 import './styled.css';
-
 import useNotification from '@/hook/useNotification';
-import { BiSolidHandRight } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
 
 type FormData = {
@@ -137,7 +134,6 @@ const AddAccount = () => {
               </h4>
             </a>
             <span className="content-back" onClick={() => navigation('/verify-email')}>
-              <BiSolidHandRight />
               <span>Xác thực lại mail</span>
             </span>
             <h3 className="title">Tạo tài khoản (phiên bản dùng cho website)</h3>

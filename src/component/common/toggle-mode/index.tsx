@@ -1,6 +1,6 @@
-import { MdOutlineLightMode, MdOutlineNightlightRound } from 'react-icons/md';
 import './toggle-mode.css';
 import { useEffect, useState } from 'react';
+import { Moon, Sun } from 'lucide-react';
 
 const ThemeType = {
   light: 'light',
@@ -36,9 +36,9 @@ const ToggleMode = () => {
   return (
     <div className="wrapper-icon">
       {theme === ThemeType.light ? (
-        <MdOutlineNightlightRound className="icon-theme" onClick={handleTheme} />
+        <Moon className="icon-theme" onClick={handleTheme} />
       ) : (
-        <MdOutlineLightMode className="icon-theme" onClick={handleTheme} />
+        <Sun className="icon-theme" onClick={handleTheme} />
       )}
     </div>
   );

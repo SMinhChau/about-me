@@ -1,7 +1,6 @@
 import './footer.css';
-import { FaGithub } from 'react-icons/fa';
-import { FaFacebook } from 'react-icons/fa';
-import { FaPhone } from 'react-icons/fa';
+import { Facebook, Github, Phone } from 'lucide-react';
+
 import Link from '../common/link';
 
 const Footer = () => {
@@ -11,13 +10,13 @@ const Footer = () => {
 
       <div className="group-icon">
         <Link href="https://github.com/SMinhChau">
-          <FaGithub className="icon-footer" />
+          <Github className="icon-footer" />
         </Link>
         <Link href="https://www.facebook.com/minhchau.141">
-          <FaFacebook className="icon-footer" />
+          <Facebook className="icon-footer" />
         </Link>
 
-        <FaPhone className="icon-footer" />
+        <Phone className="icon-footer" />
       </div>
     </footer>
   );
