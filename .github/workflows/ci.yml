@@ -1,4 +1,4 @@
-name: About me
+name: Blog
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: About me
+    name: Blog
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
