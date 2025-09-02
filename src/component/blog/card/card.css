@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+
+@layer components {
+  .blog-card-list {
+    @apply max-h-[400px]  gap-6 p-6;
+  }
+  .blog-card-top {
+    @apply flex gap-6 flex-col text-xl font-bold dark:text-text_main_dark
+     max-h-[80px] overflow-hidden text-ellipsis;
+  }
+  .blog-tags {
+    @apply flex flex-wrap flex-row gap-4 max-h-[90px] overflow-hidden;
+  }
+  .blog-tag-item {
+    @apply rounded-[8px] border-[0.8px] border-solid border-border_gray dark:hover:border-[#0f766e] 
+    p-1 text-xs;
+  }
+  .blog-time {
+    @apply italic text-sm;
+  }
+}

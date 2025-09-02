@@ -23,10 +23,12 @@ const BaseLayout = () => {
       }}
     >
       <div
-        className={`container mx-auto h-dvh w-full flex flex-col items-start px-[5%]  lg:px-[10%] `}
+        className={`container mx-auto h-dvh w-full flex flex-col items-start px-[5%] lg:px-[10%] `}
       >
         <Header />
+
         <Outlet />
+
         <Footer />
       </div>
     </ThemeContextOverFlow.Provider>

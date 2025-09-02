@@ -1,3 +1,4 @@
+import { Mail, MapPin, Phone } from 'lucide-react';
 import './styled.css';
 
 interface InfoStyled {
@@ -7,9 +8,9 @@ interface InfoStyled {
 }
 
 const Info = [
-  { id: 1, label: 'address', value: 'Ho Chi Minh' },
-  { id: 2, label: 'phone', value: '+84 795 815 992' },
-  { id: 3, label: 'email', value: 'chaunguyen.141201@gmail.com' },
+  { id: 1, label: 'address', value: 'Ho Chi Minh', icon: <MapPin /> },
+  { id: 2, label: 'phone', value: '+84 795 815 992', icon: <Phone color="#3e9392" /> },
+  { id: 3, label: 'email', value: 'chaunguyen.141201@gmail.com', icon: <Mail color="#38bdf8" /> },
 ];
 
 const ContactInfo = () => {
@@ -35,9 +36,7 @@ const ContactInfo = () => {
       {Info.map((item, index) => {
         return (
           <div key={item.id || index} className="content-item">
-            <div className="contact-label">
-              <strong>{item.label}</strong>
-            </div>
+            <div className="contact-label">{item.icon}</div>
             {renderItemValue(item)}
           </div>
         );

@@ -30,6 +30,7 @@ export default {
       mobile_bg_gray: '#94a3b8',
       bg_content_mobile: '#f1f5f9',
       bg_content_mobile_dark: '#111827',
+      text_main_dark: '#38bdf8',
       // shadow
       shadow_card_dark: '#406561',
       shadow_card_light: '#c3d0e1',

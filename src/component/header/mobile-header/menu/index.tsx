@@ -16,10 +16,10 @@ const HeaderMenus = [
     url: '/#experiences',
     icon: <UserRound />,
     hash: '#experiences',
-    disable: true,
   },
+  { id: 3, name: 'Blog', url: '/blog', hash: '#blog' },
   {
-    id: 3,
+    id: 4,
     name: 'Projects',
     url: '/#projects',
     icon: <PanelTop />,
@@ -27,7 +27,7 @@ const HeaderMenus = [
     hash: '#projects',
     disable: true,
   },
-  { id: 4, name: 'Contact', url: '/#contact', icon: <NotebookTabs />, hash: '#contact' },
+  { id: 5, name: 'Contact', url: '/#contact', icon: <NotebookTabs />, hash: '#contact' },
 ];
 
 const MobileMenu: React.FC<Props> = ({ handleMenu }: Props) => {

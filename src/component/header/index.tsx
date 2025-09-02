@@ -15,8 +15,9 @@ type Props = {
 export const HeaderMenus = [
   { id: 1, name: 'About me', url: '/#info', hash: '#info' },
   { id: 2, name: 'Experiences', url: '/#experiences', hash: '#experiences' },
-  { id: 3, name: 'Projects', url: '/#projects', hash: '#projects', disable: true },
-  { id: 4, name: 'Contact', url: '/#contact', hash: '#contact' },
+  { id: 3, name: 'Blog', url: '/blog', hash: '#blog' },
+  { id: 4, name: 'Projects', url: '/projects', hash: '#projects', disable: true },
+  { id: 5, name: 'Contact', url: '/#contact', hash: '#contact' },
 ];
 
 const Header: React.FC<Props> = ({ nonNavbar }: Props) => {
@@ -75,7 +76,7 @@ const Header: React.FC<Props> = ({ nonNavbar }: Props) => {
                     className={`rounded-lg px-3 py-2 menu-item  ${
                       item?.disable
                         ? 'disabled'
-                        : item.hash == location?.hash
+                        : item.hash == location?.hash || item.url == location.pathname
                         ? 'item-selected'
                         : ''
                     }`}

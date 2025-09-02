@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
-@layer utilities {
+@layer components {
   .card-list {
     @apply flex cursor-pointer
         flex-col gap-[16px] 
@@ -19,6 +18,9 @@
   }
   .card-name {
     @apply text-xl leading-[24px] font-bold uppercase;
+  }
+  .label {
+    @apply dark:text-text_main_dark;
   }
   .card-name a {
     @apply z-10 hover:text-title_hover;

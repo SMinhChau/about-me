@@ -25,10 +25,12 @@ const CardContent: React.FC<Props> = ({ item, styled }) => {
           isToday(end_date) ? 'Current' : formatDateTime(end_date)
         }`}
       </h2>
-      <h4 className="card-name">
-        Company name: <Link href={link}>{company_name}</Link>
+      <h4 className="card-name ">
+        <span className="label">Company name:</span> <Link href={link}>{company_name}</Link>
       </h4>
-      <span className="role">Role: {role}</span>
+      <span className="role">
+        <span className="label">Role:</span> {role}
+      </span>
 
       <div className="card-description">
         <span className="label">Responsibilities:</span>

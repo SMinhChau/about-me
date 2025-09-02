@@ -3,6 +3,7 @@ import './App.css';
 import NotificationProvider from './component/common/notify';
 import BaseLayout from './component/layout/base';
 import HomePage from './pages/home';
+import BlogPage from './pages/blog';
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <HomePage />,
+      },
+      {
+        path: '/blog',
+        element: <BlogPage />,
       },
     ],
   },

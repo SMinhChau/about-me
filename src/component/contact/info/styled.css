@@ -4,7 +4,7 @@
 
 @layer components {
   .contact-information {
-    @apply w-full flex flex-col gap-2;
+    @apply w-full flex flex-col gap-5;
   }
   .content-item {
     @apply flex flex-row w-full;

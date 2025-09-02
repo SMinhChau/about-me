@@ -1,5 +1,5 @@
 import './footer.css';
-import { Facebook, Github, Phone } from 'lucide-react';
+import { Facebook, Github } from 'lucide-react';
 
 import Link from '../common/link';
 
@@ -15,8 +15,6 @@ const Footer = () => {
         <Link href="https://www.facebook.com/minhchau.141">
           <Facebook className="icon-footer" />
         </Link>
-
-        <Phone className="icon-footer" />
       </div>
     </footer>
   );
