@@ -17,7 +17,7 @@ const HeaderMenus = [
     icon: <UserRound />,
     hash: '#experiences',
   },
-  { id: 3, name: 'Blog', url: '/blog', hash: '#blog' },
+  { id: 3, name: 'Blog', url: '/blog', hash: '#blog', icon: <PanelTop /> },
   {
     id: 4,
     name: 'Projects',
