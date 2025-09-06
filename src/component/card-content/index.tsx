@@ -16,7 +16,7 @@ const CardContent: React.FC<Props> = ({ item, styled }) => {
     return null;
   }
 
-  const { start_date, end_date, company_name, role, responsibilities, base, link } = item;
+  const { start_date, end_date, company_name, role, responsibilities, bases, link, about } = item;
 
   return (
     <div className="card-list" style={styled}>
@@ -31,6 +31,15 @@ const CardContent: React.FC<Props> = ({ item, styled }) => {
       <span className="role">
         <span className="label">Role:</span> {role}
       </span>
+
+      <div className="card-description">
+        <span className="label">Technology description: </span>
+        <div className="bases">
+          {bases.map(base => (
+            <span className="base">{base}</span>
+          ))}
+        </div>
+      </div>
 
       <div className="card-description">
         <span className="label">Responsibilities:</span>
@@ -48,8 +57,12 @@ const CardContent: React.FC<Props> = ({ item, styled }) => {
       </div>
 
       <div className="card-description">
-        <span className="label">Technology description: </span>
-        <span>{base}</span>
+        <span className="label">About company: </span>
+        <div className="about-company">
+          {about.map(detail => (
+            <span className="">{detail}</span>
+          ))}
+        </div>
       </div>
 
       {/* <span className="icon-bottom">

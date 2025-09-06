@@ -10,16 +10,7 @@ export const BlogCards = [
   {
     id: 1,
     title: 'Generate PDF From Html In Div  ',
-    tags: [
-      'Javascript',
-      'React',
-      'Javascript',
-      'React',
-      'Javascript',
-      'React',
-      'Javascript',
-      'React',
-    ],
+    tags: ['Javascript', 'React', 'Styled-components', 'React Hook Form', 'Cloudflare'],
     href: 'https://test-htmlspdf.pages.dev',
     create_date: 'June',
     is_blank: true,

@@ -38,9 +38,21 @@
     @apply font-bold;
   }
   .responsibilities-list {
-    @apply list-disc pl-[20px];
+    @apply list-disc pl-[20px]  mt-1;
   }
   .role {
     @apply text-lg;
+  }
+  .bases {
+    @apply flex gap-4 items-center flex-wrap mt-2;
+  }
+  .base {
+    @apply rounded-lg border-blue_border dark:bg-bg_normal px-2 bg-[#e0f2fe];
+  }
+  .about-company {
+    @apply flex flex-col gap-2 mt-1 items-start;
+  }
+  .about-company span {
+    @apply bg-[#fef2f2] dark:bg-[#404040] p-2 rounded-lg;
   }
 }

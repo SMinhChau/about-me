@@ -5,7 +5,8 @@ export type ExperiencesType = {
   role: string;
   responsibilities: Array<string>;
   link: string;
-  base: string;
+  bases: Array<string>;
+  about: Array<string>;
 };
 
 export const MyExperiences = [
@@ -22,7 +23,27 @@ export const MyExperiences = [
       'Write technical documentation for the Backend based on the Product documentation.',
       'Enhanced performance & optimized dev practices.',
     ],
-    base: 'JavaScript, ReactJS, NextJS, MUI IU, Redux, React Hook Form, Styled-components, RESTful API, Cloudflare, CSS Modules Git, Bundle size, SEO, ',
+    bases: [
+      'JavaScript',
+      'ReactJS',
+      'NextJS',
+      'MUI IU',
+      'Redux',
+      'React Hook Form',
+      'Styled-components',
+      'RESTful API',
+      'Cloudflare',
+      'CSS Modules',
+      'Git',
+      'Bundle size',
+      'SEO',
+    ],
+    about: [
+      "Muaban.net is Vietnam's leading classified advertising platform that has been operating since 1998.",
+      'Serves as a comprehensive marketplace for various goods and services: Simple posting process, Multiple payment options, Advanced search functionality, 24/7 customer support.',
+      'The platform serves both individual users and businesses looking to buy, sell, rent, or advertise their products and services.',
+      'The website emphasizes free posting for many categories and provides a user-friendly interface for both buyers and sellers to connect efficiently in the Vietnamese market.',
+    ],
   },
   {
     id: 2,
@@ -36,7 +57,11 @@ export const MyExperiences = [
       'Collaborated and shared experiences with the development team.',
       'Gained experience in project workflow, documentation, and writing maintainable code',
     ],
-    base: 'JavaScript, Typescript, React Native, Redux, HTML, CSS, SCSS, Git',
+    bases: ['JavaScript', 'Typescript', 'React Native', 'Redux', 'HTML', 'CSS', 'SCSS', 'Git'],
+    about: [
+      'Kyanon Digital is a global technology consulting and software development company that specializes in delivering digital transformation solutions for enterprise clients, particularly.',
+      'Kyanon Digital positions itself as a comprehensive digital transformation partner that combines technical expertise with business acumen to deliver measurable results for enterprise clients worldwide.',
+    ],
   },
 ];
 

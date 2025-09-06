@@ -7,13 +7,13 @@
     @apply w-full flex flex-col gap-5;
   }
   .content-item {
-    @apply flex flex-row w-full;
+    @apply flex flex-row;
   }
   .content-item .contact-label {
-    @apply text-wrap w-[100px] max-md:w-[90px] capitalize;
+    @apply text-wrap w-[40px];
   }
   .content-item .contact-value {
-    @apply opacity-95 text-wrap break-all truncate w-[calc(100%_-_100px)] max-md:w-[calc(100%_-_90px)];
+    @apply opacity-95 text-wrap break-all truncate w-[calc(100%_-_40px)];
   }
   .content-item a {
     @apply hover:opacity-100;
